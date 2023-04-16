@@ -1,7 +1,7 @@
 <h3 align="center">Loopstudios landing page</h3>
 <p align="center">Frontend Mentor solution.
   <br>
-  <a href="https://stranger-counter.netlify.app/"><strong>View Demo »</strong></a>
+  <a href="https://alessandracasole-dev.com/loopstudios-landing-page/"><strong>View Demo »</strong></a>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -40,13 +40,13 @@ Users should be able to:
 
 ### Screenshots
 
-[!./assets/img/desktop/screenshot.png]
-[!./assets/img/mobile/screenshot.png]
+![](./assets/img/desktop/screenshot.png)
+![](./assets/img/mobile/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [github.com/alessandra-casole/loopstudios-landing-page](https://github.com/alessandra-casole/loopstudios-landing-page)
+- Live Site URL: [alessandracasole-dev.com/loopstudios-landing-page](https://alessandracasole-dev.com/loopstudios-landing-page/)
 
 ## My process
 
