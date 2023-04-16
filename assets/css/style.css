@@ -1,0 +1,246 @@
+/* Fonts: Alata + Josefin Sans */
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Nav */
+.navbar-toggler,
+.navbar-toggler:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* Generals */
+body {
+  font-size: 0.9375rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Header */
+header {
+  color: hsl(0, 0%, 100%);
+  background-image: url(../img/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* Nav */
+}
+header .overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+header .navbar {
+  font-family: "Josefin Sans", sans-serif;
+  padding-top: 2rem;
+  /* Logo */
+  /* Offcanvas Menu */
+}
+header .navbar .navbar-brand img {
+  width: 80%;
+}
+header .navbar .offcanvas {
+  background-color: hsl(0, 0%, 0%);
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+header .navbar .offcanvas a,
+header .navbar .offcanvas a:active,
+header .navbar .offcanvas a:hover,
+header .navbar .offcanvas a:focus {
+  color: hsl(0, 0%, 100%);
+}
+
+.nav-link::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  display: block;
+  background-color: hsl(0, 0%, 100%);
+  transform: scaleX(0);
+  transition: transform 0.5s ease 0s;
+}
+
+.nav-link:hover::after {
+  width: 50%;
+  margin: 0 auto;
+  transform: scaleX(1);
+}
+
+h1 {
+  border: 2px solid hsl(0, 0%, 100%);
+  padding: 1.375rem;
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 100%);
+}
+
+h2 {
+  font-size: 2rem;
+  color: hsl(0, 0%, 0%);
+}
+
+.section-padding {
+  padding-top: 6rem;
+}
+
+/* About */
+.about img {
+  max-width: 100%;
+}
+.about p {
+  color: hsl(0, 0%, 55%);
+  font-family: "Alata", sans-serif;
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+/* Projects */
+.projects .card:hover {
+  border: 0;
+  border-radius: 0;
+}
+.projects .card-img-overlay {
+  padding-top: 3.3rem;
+  padding-left: 1.3rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), transparent);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.projects .card-img-overlay:hover {
+  background: hsla(0, 0%, 100%, 0.751);
+  color: hsl(0, 0%, 0%);
+  border-radius: 0;
+}
+.projects .all-projects-mobile a {
+  border: 1px solid hsl(0, 0%, 0%);
+}
+.projects .all-projects-desktop a {
+  border: 2px solid hsl(0, 0%, 55%);
+}
+.projects a {
+  font-family: "Alata", sans-serif;
+  letter-spacing: 4px;
+  padding-left: 2.3rem;
+  padding-right: 2.3rem;
+  color: hsl(0, 0%, 0%);
+  transition: 0.3s ease;
+}
+.projects a:hover, .projects a:active {
+  border: 2px solid hsl(0, 0%, 55%) !important;
+  background-color: hsl(0, 0%, 0%) !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+/* Footer */
+footer {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  padding-top: 3.5rem;
+}
+footer .navbar-brand img {
+  width: 40%;
+}
+footer .navbar-nav {
+  line-height: 1.7;
+}
+footer .navbar-nav,
+footer .copy {
+  font-family: "Alata", sans-serif;
+}
+footer .social-icon:hover {
+  transition: 0.3s ease;
+  filter: brightness(0.5);
+}
+footer .copy {
+  font-size: 0.875rem;
+  color: hsl(0, 0%, 41%);
+}
+footer .attribution {
+  font-size: 0.6875rem;
+}
+footer .attribution a {
+  color: hsl(228, 39.59%, 62.2%);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  /* Header */
+  header {
+    background-image: url(../img/desktop/image-hero.jpg);
+    background-position: center center;
+    /* Nav */
+  }
+  header .overlay {
+    background: rgba(0, 0, 0, 0.35);
+  }
+  header .navbar {
+    font-family: "Alata", sans-serif;
+    /* Offcanvas Menu */
+  }
+  header .navbar .navbar-brand img {
+    width: 100%;
+  }
+  header .navbar .offcanvas {
+    font-family: "Alata", sans-serif;
+    font-size: 0.9375rem;
+    text-transform: capitalize;
+  }
+  /* Hero */
+  .hero-title {
+    max-width: 600px;
+  }
+  h1 {
+    padding: 2.3rem;
+    font-size: 4rem;
+  }
+  .section-padding {
+    padding-top: 10.2rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+  }
+  /* Projects */
+  .projects {
+    margin-bottom: 11rem;
+  }
+  .projects h2 {
+    margin-bottom: 5.2rem !important;
+  }
+  .projects .card-img-overlay {
+    padding-left: 2.1rem;
+    padding-bottom: 1.16rem;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
+  }
+  /* Footer */
+  footer .navbar-brand img {
+    width: 30%;
+  }
+}
+/* 992px */
+@media (min-width: 992px) {
+  /* About */
+  .about img {
+    max-width: none;
+  }
+  .about-wrap {
+    margin-top: 11rem;
+    padding: 2.5rem 0.5rem 0 5.5rem;
+    background-color: hsl(0, 0%, 100%);
+    margin-left: 0.1rem;
+  }
+  .about-wrap p {
+    font-size: 0.9375rem;
+    margin-top: 2rem !important;
+    max-width: none;
+  }
+}

@@ -1,0 +1,301 @@
+/* Fonts: Alata + Josefin Sans */
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+$titles-font: 'Josefin Sans', sans-serif;
+$txt-font: 'Alata', sans-serif;
+
+$white-color: hsl(0, 0%, 100%);
+$black-color: hsl(0, 0%, 0%);
+$dark-gray-color: hsl(0, 0%, 55%);
+$darker-gray-color: hsl(0, 0%, 41%);
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nav */
+.navbar-toggler,
+.navbar-toggler:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+/* Generals */
+body {
+    font-size: .9375rem;
+    font-family: $titles-font;
+}
+
+/* Header */
+header {
+    color: $white-color;
+    background-image: url(../img/mobile/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .overlay {
+        background: rgb(0 0 0 / 20%);
+    }
+
+    /* Nav */
+    .navbar {
+        font-family: $titles-font;
+        padding-top: 2rem;
+    
+        /* Logo */
+        .navbar-brand img {
+            width: 80%;
+        }
+    
+        /* Offcanvas Menu */
+        .offcanvas {
+            background-color: $black-color;
+            font-size: 1.125rem;
+            text-transform: uppercase;
+    
+            a,
+            a:active,
+            a:hover,
+            a:focus {
+                color: $white-color;
+            }
+        }
+    }
+}
+
+.nav-link::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color: $white-color;
+    transform: scaleX(0);
+    transition: transform .5s ease 0s;
+}
+
+.nav-link:hover::after {
+    width: 50%;
+    margin: 0 auto;
+    transform: scaleX(1);
+}
+
+h1 {
+    border: 2px solid $white-color;
+    padding: 1.375rem;
+    font-size: 2.5rem;
+    color: $white-color;
+}
+
+h2 {
+    font-size: 2rem;
+    color: $black-color;
+}
+
+.section-padding {
+    padding-top: 6rem;
+}
+
+/* About */
+.about {
+    
+    img {
+        max-width: 100%;
+    }
+    
+    p {
+        color: $dark-gray-color;
+        font-family: $txt-font;
+        line-height: 1.7;
+        max-width: 650px;
+    }
+}
+
+/* Projects */
+.projects {
+
+    .card:hover {
+        border: 0;
+        border-radius: 0;
+    }
+
+    .card-img-overlay {
+        padding-top: 3.3rem;
+        padding-left: 1.3rem;
+        background: linear-gradient(90deg, rgba(0, 0, 0, .6), transparent);
+        color: $white-color;
+        cursor: pointer;
+        transition: .3s ease;
+
+        &:hover {
+            background: hsla(0, 0%, 100%, .751);
+            color: $black-color;
+            border-radius: 0;
+        }
+    }
+
+    .all-projects-mobile a {
+        border: 1px solid $black-color;
+    }
+
+    .all-projects-desktop a {
+        border: 2px solid $dark-gray-color;
+    }
+
+    a {
+        font-family: $txt-font;
+        letter-spacing: 4px;
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
+        color: $black-color;
+        transition: .3s ease;
+
+        &:hover,
+        &:active {
+            border: 2px solid $dark-gray-color !important;
+            background-color: $black-color !important;
+            color: $white-color !important;
+        }
+    }
+}
+
+/* Footer */
+footer {
+    background-color: $black-color;
+    color: $white-color;
+    padding-top: 3.5rem;
+
+    .navbar-brand img {
+        width: 40%;
+    }
+
+    .navbar-nav {
+        line-height: 1.7;
+    }
+
+    .navbar-nav,
+    .copy {
+        font-family: $txt-font;
+    }
+
+    .social-icon:hover {
+        transition: .3s ease;
+        filter: brightness(0.5);
+    }
+
+    .copy {
+        font-size: .875rem;
+        color: $darker-gray-color;
+    }
+    
+    .attribution {
+        font-size: .6875rem;
+
+        a {
+            color: hsl(228deg 39.59% 62.2%);
+        }
+    }
+
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+
+    /* Header */
+    header {
+        background-image: url(../img/desktop/image-hero.jpg);
+        background-position: center center;
+
+        .overlay {
+            background: rgb(0 0 0 / 35%);
+        }
+
+        /* Nav */
+        .navbar {
+            font-family: $txt-font;
+
+            .navbar-brand img {
+                width: 100%;
+            }
+            
+            /* Offcanvas Menu */
+            .offcanvas {
+                font-family: $txt-font;
+                font-size: .9375rem;
+                text-transform: capitalize;
+            }
+        }    
+    }
+
+    /* Hero */
+    .hero-title {
+        max-width: 600px;
+    }
+
+    h1 {
+        padding: 2.3rem;
+        font-size: 4rem;
+    }
+
+    .section-padding {
+        padding-top: 10.2rem;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+
+    /* Projects */
+    .projects {
+        margin-bottom: 11rem;
+
+        h2 {
+            margin-bottom: 5.2rem !important;
+        }
+
+        .card-img-overlay {
+            padding-left: 2.1rem;
+            padding-bottom: 1.16rem;
+            background: linear-gradient(0deg, rgba(0, 0, 0, .6), transparent);
+        }
+
+    }
+    
+    /* Footer */
+    footer .navbar-brand img {
+        width: 30%;
+    }
+}
+
+/* 992px */
+@media (min-width:992px) {
+    /* About */
+    .about img {
+        max-width: none;
+    }
+    
+    .about-wrap {
+        margin-top: 11rem;
+        padding: 2.5rem .5rem 0 5.5rem;
+        background-color: $white-color;
+        margin-left: .1rem;
+    
+        p {
+            font-size: .9375rem;
+            margin-top: 2rem !important;
+            max-width: none;
+        }
+    }
+}
+
